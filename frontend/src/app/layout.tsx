@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import { cn } from "@/lib/utils"; 
+import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggler } from "@/components/theme-toggler";
 import { Searchbar } from "@/components/searchbar";
@@ -32,8 +32,10 @@ export default function RootLayout({
             <ThemeToggler />
           </div>
 
-          <div className="max-w-2xl mx-auto pt-24">
+          <div className="max-w-2xl mx-auto pt-24 flex flex-col gap-24">
             <Searchbar />
+
+            {children}
           </div>
         </ThemeProvider>
       </body>

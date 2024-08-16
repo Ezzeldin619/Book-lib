@@ -23,14 +23,6 @@
       "required": true,
       "unique": false
     },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "description": {
       "type": "blocks",
       "required": true
@@ -39,6 +31,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::book-category.book-category"
+    },
+    "coverUrl": {
+      "type": "text",
+      "required": true,
+      "unique": true
     }
   }
 }
